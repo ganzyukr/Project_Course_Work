@@ -21,7 +21,6 @@ public class LoginPage extends BasePage {
         public WebElement logoutButton;
         public WebDriverWait wait;
 
-
         public LoginPage(WebDriver driver) {
             super(driver);
             driver.get("https://demoqa.com/login");

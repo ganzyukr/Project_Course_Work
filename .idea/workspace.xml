@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c1bcbf-8d16-4678-be53-a1fa8e1fee27" name="Changes" comment="Created Package uiTests and fill pom.xml">
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uiTests/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uiTests/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uiTests/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/uiTests/Tests.java" afterDir="false" />
+    <list default="true" id="a8c1bcbf-8d16-4678-be53-a1fa8e1fee27" name="Changes" comment="Web UI Tests 1.1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/uiTests/LoginTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/Tests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +43,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Project Idea/Project_Course_Work",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Project Idea/Project_Course_Work&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="uiTests" />
@@ -61,8 +61,8 @@
       <recent name="uiTests" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Tests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.LoginTests">
+    <configuration name="LoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectCourseWork" />
       <extension name="coverage">
         <pattern>
@@ -71,8 +71,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="uiTests" />
-      <option name="MAIN_CLASS_NAME" value="uiTests.Tests" />
+      <option name="MAIN_CLASS_NAME" value="uiTests.LoginTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectCourseWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uiTests" />
+      <option name="MAIN_CLASS_NAME" value="uiTests.LoginTests" />
       <option name="METHOD_NAME" value="loginTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginTests.logoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProjectCourseWork" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="uiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="uiTests" />
+      <option name="MAIN_CLASS_NAME" value="uiTests.LoginTests" />
+      <option name="METHOD_NAME" value="logoutTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,7 +111,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Tests.loginTest" />
+        <item itemvalue="JUnit.LoginTests" />
+        <item itemvalue="JUnit.LoginTests.logoutTest" />
+        <item itemvalue="JUnit.LoginTests.loginTest" />
       </list>
     </recent_temporary>
   </component>
@@ -100,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664553910090</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Web UI Tests 1.1">
+      <created>1664749042496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664749042496</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,17 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created Package uiTests and fill pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Package uiTests and fill pom.xml" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/uiTests/Tests.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Web UI Tests 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Web UI Tests 1.1" />
   </component>
 </project>

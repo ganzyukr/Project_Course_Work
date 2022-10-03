@@ -2,24 +2,23 @@ package uiTests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class LoginPage extends BasePage {
-
 
         @FindBy(xpath = "//button[@id=\"login\"]")
         public WebElement loginButton;
 
         @FindBy (xpath = "//input[@id=\"userName\"]")
-        public WebElement loginField;
+        public WebElement userNameField;
 
         @FindBy (xpath = "//input[@id=\"password\"]")
         public WebElement passwordField;
 
+        @FindBy(xpath = "//*[text()='Log out']")
+        public WebElement logoutButton;
         public WebDriverWait wait;
 
 
@@ -30,7 +29,7 @@ public class LoginPage extends BasePage {
         }
 
         public void credentialsUserName (String text) {
-            typeText(loginField, text);
+            typeText(userNameField, text);
         }
 
         public void credentialsPassword (String text) {
@@ -38,8 +37,13 @@ public class LoginPage extends BasePage {
         }
 
         public void login(){
-            this.credentialsUserName("ganzyuk_test");
-            this.credentialsPassword("$Ganzyuk_Test123");
-            this.clickButton(loginButton);
+            credentialsUserName("ganzyuk_test");
+            credentialsPassword("$Ganzyuk_Test123");
+            clickButton(loginButton);
         }
+
+        // The second part
+        public void logoutButton() {
+            clickButton(logoutButton);
         }
+}

@@ -1,5 +1,6 @@
 package apiTests;
 
+import org.json.JSONArray;
 import org.junit.Assert;
 import org.junit.Test;
 import io.restassured.RestAssured;
@@ -9,34 +10,19 @@ import org.json.JSONObject;
 import Utils.Utils;
 import java.util.ArrayList;
 
-import static io.restassured.RestAssured.given;
 
 public class RestAssuredTests {
 
     @Test
     public void getAuthorizationToken () {
-        String authUrl = "https://demoqa.com/Account/v1/User";
         String profileUrl = "https://demoqa.com/Account/v1/User/";
         String userName = "ganzyuk_tests_" + Utils.givenRandomString();
         String password = "P@ssword2";
 
         //1. registration user
-        RequestSpecification authRequest = RestAssured.given();
-        authRequest.header("Content-Type", "application/json");
-
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("userName", userName);
-        requestBody.put("password", password);
-        authRequest.body(requestBody.toString());
-
-        Response responseAuth = authRequest.post(authUrl);
-        responseAuth.then().statusCode(201);
-        String userId = responseAuth.then().extract().path("userID");
-
-        //end registration
+        String userId = Utils.registrationUserByCredentials(userName, password);
 
         //2. get token for registered user
-
         String token = Utils.getTokenByUserCredentials(userName, password);
 
         //3. get profile registered user
@@ -54,26 +40,14 @@ public class RestAssuredTests {
 
     @Test
     public void getUserBooks () {
-        String authUrl = "https://demoqa.com/Account/v1/User";
         String booksUrl = "https://demoqa.com/BookStore/v1/Books";
         String userName = "ganzyuk_tests_" + Utils.givenRandomString();
         String password = "P@ssword2";
 
         //1. registration user
-        RequestSpecification authRequest = RestAssured.given();
-        authRequest.header("Content-Type", "application/json");
-
-        JSONObject requestBody = new JSONObject();
-        requestBody.put("userName", userName);
-        requestBody.put("password", password);
-        authRequest.body(requestBody.toString());
-
-        Response responseAuth = authRequest.post(authUrl);
-        responseAuth.then().statusCode(201);
-        //end registration
+        Utils.registrationUserByCredentials(userName, password);
 
         //2. get token for registered user
-
         String token = Utils.getTokenByUserCredentials(userName, password);
 
         //3.get user books
@@ -86,8 +60,19 @@ public class RestAssuredTests {
 
         ArrayList books = responseBooks.then().extract().path("books");
 
+        JSONArray booksArray = new JSONArray(books.toArray());
 
-        String actualBookTitle = "?????";
+        String actualBookTitle = null;
+
+        for (int i = 0; i < booksArray.length(); ++i) {
+            JSONObject line = booksArray.getJSONObject(i);
+            String isbn = line.getString("isbn");
+
+            if(isbn.equals("9781449325862")){
+                actualBookTitle = line.getString("title");
+                break;
+            }
+        }
 
         //asserts
         Assert.assertEquals("Git Pocket Guide", actualBookTitle);

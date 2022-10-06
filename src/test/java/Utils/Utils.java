@@ -25,6 +25,22 @@ public class Utils {
         return response.then().extract().path("token");
     }
 
+    public static String registrationUserByCredentials(String userName, String userPassword){
+        String url = "https://demoqa.com/Account/v1/User";
+        RequestSpecification request = RestAssured.given();
+        request.header("Content-Type", "application/json");
+
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("userName", userName);
+        requestBody.put("password", userPassword);
+        request.body(requestBody.toString());
+
+        Response response = request.post(url);
+        response.then().statusCode(201);
+
+        return response.then().extract().path("userID");
+    }
+
     public static String givenRandomString() {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'

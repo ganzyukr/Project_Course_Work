@@ -28,8 +28,6 @@ import static org.junit.Assert.assertEquals;
         String expectedText = "Git Pocket Guide";
         assertEquals(actualText, expectedText);
 
-        //Close browser
-        driver.quit();
     }
 
     @Test
@@ -50,7 +48,5 @@ import static org.junit.Assert.assertEquals;
         String expectedTitle = "Login in Book Store";
         assertEquals(actualText, expectedTitle);
 
-        //Close browser
-        driver.quit();
     }
 }

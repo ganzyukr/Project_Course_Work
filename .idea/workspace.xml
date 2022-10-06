@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8c1bcbf-8d16-4678-be53-a1fa8e1fee27" name="Changes" comment="Web UI Tests 1.2 part2">
-      <change afterPath="$PROJECT_DIR$/src/test/java/apiTests/RestAssuredTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Utils.java" afterDir="false" />
+    <list default="true" id="a8c1bcbf-8d16-4678-be53-a1fa8e1fee27" name="Changes" comment="API Tests 1.1-1.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/uiTests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/uiTests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <recent name="uiTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RestAssuredTests.getUserBooks">
+  <component name="RunManager" selected="JUnit.LoginTests">
     <configuration name="LoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectCourseWork" />
       <extension name="coverage">
@@ -76,7 +75,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.logoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProjectCourseWork" />
       <extension name="coverage">
         <pattern>
@@ -86,7 +85,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="uiTests" />
       <option name="MAIN_CLASS_NAME" value="uiTests.LoginTests" />
-      <option name="METHOD_NAME" value="logoutTest" />
+      <option name="METHOD_NAME" value="loginTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -141,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RestAssuredTests.getUserBooks" />
-        <item itemvalue="JUnit.RestAssuredTests" />
-        <item itemvalue="JUnit.RestAssuredTests.getAuthorizationToken" />
         <item itemvalue="JUnit.LoginTests" />
-        <item itemvalue="JUnit.LoginTests.logoutTest" />
+        <item itemvalue="JUnit.RestAssuredTests" />
+        <item itemvalue="JUnit.LoginTests.loginTest" />
+        <item itemvalue="JUnit.RestAssuredTests.getUserBooks" />
+        <item itemvalue="JUnit.RestAssuredTests.getAuthorizationToken" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664830953977</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="API Tests 1.1-1.2">
+      <created>1664989587961</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664989587961</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,6 +211,18 @@
     <MESSAGE value="Web UI Tests 1.1" />
     <MESSAGE value="Web UI Tests 1.2" />
     <MESSAGE value="Web UI Tests 1.2 part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Web UI Tests 1.2 part2" />
+    <MESSAGE value="API Tests 1.1-1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="API Tests 1.1-1.2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/apiTests/RestAssuredTests.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

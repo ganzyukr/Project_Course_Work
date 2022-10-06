@@ -1,6 +1,7 @@
 package uiTests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +19,13 @@ public class BasePage {
         WebDriverWait wait;
         public String title;
 
-        public BasePage() {
+    @After
+    public void tearDown() {
+        //Close browser
+        driver.quit();
+    }
+
+    public BasePage() {
             //System.setProperty("webdriver.chrome.driver", "D:\\Soft\\chromedriver.exe");
             WebDriverManager.chromedriver().version("105").setup();
             ChromeOptions options = new ChromeOptions();

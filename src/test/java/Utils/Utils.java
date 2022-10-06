@@ -1,10 +1,9 @@
-package test;
+package Utils;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
-
 import java.util.Random;
 
 public class Utils {
